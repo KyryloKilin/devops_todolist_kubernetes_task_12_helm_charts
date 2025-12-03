@@ -50,4 +50,4 @@ tolerations:
 
 serviceAccount:
   create: true
-  name: "mysql-sa"
+  name: sa

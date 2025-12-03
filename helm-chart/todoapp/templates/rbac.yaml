@@ -20,7 +20,7 @@ metadata:
     {{- include "todoapp.labels" . | nindent 4 }}
 subjects:
   - kind: ServiceAccount
-    name: {{ .Values.serviceAccount.name }}
+    name: {{ printf "%s-%s" .Chart.Name .Values.serviceAccount.name }}
     namespace: {{ .Values.namespace.name }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
